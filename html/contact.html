@@ -1,0 +1,15 @@
+<div class="mainContainer" data-ng-controller="ContactController">
+	
+	<div class="connectedSites">
+		<github></github>
+		<twitter></twitter>
+		<linkedin></linkedin>
+	</div>
+	<div class="messageTitle">Message</div>
+	<form>
+		<label>Name</label><input class="contactInput" type="text" data-ng-model="name"/><br/>
+		<label>Email</label><input class="contactInput emailInput" type="email" data-ng-model="email"/>
+		<textarea class="contactTextarea" data-ng-model="body"></textarea><br/>
+		<button class="contactSend" data-ng-click="submitEmail()">Send</button>
+	</form>
+</div>

@@ -1,0 +1,20 @@
+<html data-ng-app="Portfolio">
+<head>
+<title>Portfolio</title>
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="controllers.js"></script>
+<script type="text/javascript" src="routing.js"></script>
+<script type="text/javascript" src="directives.js"></script>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav data-ng-controller="NavigationController">
+	<div class="portfolioLogo" data-ng-click="toHome()">{{ logo.text }}</div>
+	<ul>
+		<li data-ng-click="toNav()" data-ng-repeat='nav in navigation' >{{nav.name}}</li>
+	</ul>
+</nav>
+<div data-ng-view="">
+</div>
+</body>
+</html>

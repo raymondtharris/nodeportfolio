@@ -1,0 +1,11 @@
+<div class="mainContainer" data-ng-controller="PortfolioController">
+	
+	<input placeholder="Search" class="portfolioFilter"type='text' data-ng-model="searchFilter"/>
+	<button class="filterCancel" data-ng-click="cancelFilter()">Cancel</button>
+	<div class="portfolioBox" data-ng-repeat="ps in projects | filter:searchFilter | orderBy:'name'">
+		<div class="portfolioTitle">{{ps.name}} <span class="portfolioVersion">- ver. {{ps.version}}</span> </div>
+		<div class="portfolioDescription">{{ps.description}}</div>
+	</div>
+	
+	
+</div>
